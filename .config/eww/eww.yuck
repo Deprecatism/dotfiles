@@ -9,4 +9,15 @@
   :reserve (struts :distance "3%" :side "top")
   :windowtype "dock"
   :exclusive true
-"example content")
+  (bar)
+)
+
+(defwidget bar []
+  (box
+    :width "5%"
+    :orientation "h"
+    (
+      systray :space-evenly true
+    )
+  )
+)
