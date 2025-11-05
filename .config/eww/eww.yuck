@@ -3,10 +3,10 @@
   :geometry (geometry :x "0%"
     :y "0%"
     :width "100%"
-    :height "3%"
+    :height "3.5%"
   :anchor "bottom center")
   :stacking "bg"
-  :reserve (struts :distance "3%" :side "top")
+  :reserve (struts :distance "3.5%" :side "bottom")
   :windowtype "dock"
   :exclusive true
   (bar)
@@ -14,10 +14,14 @@
 
 (defwidget bar []
   (box
+    :class "bar"
     :width "5%"
     :orientation "h"
+    :halign "end"
     (
-      systray :space-evenly true
+      systray
+      :space-evenly false
+      :spacing 4
     )
   )
 )
