@@ -13,15 +13,38 @@
 )
 
 (defwidget bar []
-  (box
-    :class "bar"
-    :width "5%"
-    :orientation "h"
-    :halign "end"
-    (
-      systray
-      :space-evenly false
-      :spacing 4
+  (centerbox :orientation "h"
+    (box
+      :class "bar"
+      :width "5%"
+      :orientation "h"
+      :halign "start"
+      "${jq(active_window, '.class', 'r')}"
+    )
+    (box
+      :class "bar"
+      :width "5%"
+      :orientation "h"
+      :halign "end"
+      (
+        systray
+        :space-evenly false
+        :spacing 4
+      )
+    )
+    (box
+      :class "bar"
+      :width "5%"
+      :orientation "h"
+      :halign "end"
+      (
+        systray
+        :space-evenly false
+        :spacing 4
+      )
     )
   )
 )
+
+(defpoll active_window :interval "1s"
+"hyprctl activewindow -j")
