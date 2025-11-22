@@ -5,7 +5,7 @@
     :width "100%"
     :height "3.5%"
   :anchor "bottom center")
-  :stacking "bg"
+  :stacking "bottom"
   :reserve (struts :distance "3.5%" :side "bottom")
   :windowtype "dock"
   :exclusive true
@@ -19,19 +19,9 @@
       :width "5%"
       :orientation "h"
       :halign "start"
-      "${jq(active_window, '.class', 'r')}"
+      "${(jq(active_window, '.class', 'r') == 'null') ? '' : jq(active_window, '.class', 'r')}"
     )
-    (box
-      :class "bar"
-      :width "5%"
-      :orientation "h"
-      :halign "end"
-      (
-        systray
-        :space-evenly false
-        :spacing 4
-      )
-    )
+    (box)
     (box
       :class "bar"
       :width "5%"
@@ -45,6 +35,7 @@
     )
   )
 )
+
 
 (defpoll active_window :interval "1s"
 "hyprctl activewindow -j")
