@@ -14,8 +14,9 @@
 
 (defwidget bar []
   (centerbox :orientation "h"
+    :class "bar"
     (box
-      :class "bar"
+      :class "active_window"
       :width "5%"
       :orientation "h"
       :halign "start"
@@ -23,7 +24,7 @@
     )
     (box)
     (box
-      :class "bar"
+      :class "systray"
       :width "5%"
       :orientation "h"
       :halign "end"
