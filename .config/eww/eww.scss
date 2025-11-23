@@ -5,9 +5,10 @@
 .bar {
     padding: 0 12px 0 12px;
     background: url("assets/bg.png") 100% 100%;
+    border-radius: 25px;
 }
 
-.workspace_1 {
-    color: #ffffff;
-    background-color: #ffffff;
+.active_window {
+    font-family: "JetBrainsMono Nerd Font Bold";
+    font-size: x-large;
 }
