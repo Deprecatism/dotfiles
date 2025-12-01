@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer to change wallpaper randomly with hyprpaper
+
+[Timer]
+OnBootSec=30s
+OnUnitActiveSec=1m
+Persistent=true
+
+[Install]
+WantedBy=timers.target
