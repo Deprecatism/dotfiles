@@ -5,4 +5,7 @@ CURRENT_WALL=$(hyprctl hyprpaper listloaded)
 
 WALLPAPER=$(find "$WALLPAPER_DIR" -type f ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
 
-hyprctl hyprpaper reload ,"$WALLPAPER"
+export SWWW_TRANSITION_FPS=90
+export SWWW_TRANSITION_DURATION=5
+
+swww img -t top "$WALLPAPER"
