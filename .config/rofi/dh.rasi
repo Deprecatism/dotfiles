@@ -1,0 +1,11 @@
+window {
+    transparency: "real";
+    width: 50%;
+    anchor: "top";
+}
+
+
+entry {
+	text-color: #FFFFFF;
+    hide-cursor-on-empty: true;
+}
