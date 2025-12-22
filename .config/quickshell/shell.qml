@@ -8,7 +8,6 @@ Variants {
 
     delegate: Component {
         PanelWindow {
-          color: '#58000000'
             required property var modelData
 
             readonly property list<MprisPlayer> players: Mpris.players.values
@@ -19,9 +18,12 @@ Variants {
 
             readonly property bool is_active: active_player === undefined
 
+
+
+            color: "transparent"
             aboveWindows: false
-            implicitHeight: modelData.height / 3
             implicitWidth: modelData.width / 2.25
+            implicitHeight: modelData.height / 3
 
             anchors {
                 bottom: true
@@ -34,9 +36,36 @@ Variants {
             }
 
             Rectangle {
-              x: modelData.height / 32
-              y: modelData.height / 32
+                implicitHeight: parent.height
+                implicitWidth: parent.width
+                radius: 30, 30, 30, 30
+
                 ClippingWrapperRectangle {
+                    width: parent.width
+                    height: parent.height
+                    radius: 30
+                    clip: true
+                    color: "#FFFFFF"
+
+                    Image {
+                        asynchronous: true
+                        anchors.fill: parent
+                        source: active_player.trackArtUrl
+                        fillMode: Image.PreserveAspectCrop
+                    }
+
+                }
+
+                Rectangle {
+                    implicitHeight: parent.height
+                    implicitWidth: parent.width
+                    radius: 30, 30, 30, 30
+                    color: '#d4000000'
+                }
+
+                ClippingWrapperRectangle {
+                    y: parent.height / 16
+                    x: parent.width / 16
                     width: modelData.height / 8
                     height: modelData.height / 8
                     radius: width / 2
