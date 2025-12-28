@@ -1,1 +1,3 @@
-@theme "/home/dep/.config/rofi/dh.rasi"
+//@theme "/home/dep/.config/rofi/dh.rasi"
+
+@theme "/usr/share/rofi/themes/material.rasi"
