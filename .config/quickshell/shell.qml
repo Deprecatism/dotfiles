@@ -1,18 +1,41 @@
-import QtQuick
 import Quickshell
-import Quickshell.Services.Mpris
-import Quickshell.Widgets
+import Quickshell.Wayland
+import Quickshell.Io
+import Quickshell.Hyprland
+import QtQuick
+import QtQuick.Layouts
+import Quickshell.Services.SystemTray
+import QtQuick.Controls
 
-Scope {
-    required property var modelData
-    readonly property var players: Mpris.players.values
-    readonly property MprisPlayer active_player: players.find((p) => {
-        return p.identity.toLowerCase() === "spotify";
-    })
-    readonly property bool is_active: !(active_player === undefined || active_player === null)
+PanelWindow {
+    id: root
 
-    Spotify {
-        player: active_player
+    anchors.top: true
+    anchors.left: true
+    anchors.right: true
+    implicitHeight: 45
+    color: "transparent"
+
+    RowLayout {
+        anchors.fill: parent
+        anchors.margins: 8
+        spacing: 8
+
+        Repeater {
+            model: SystemTray.items
+            Rectangle {
+                width: 32
+                height: 32 
+                Button {
+                    anchors.fill: parent
+                    Image {
+                        anchors.fill: parent
+                        source: modelData.icon
+                    }
+                    text: modelData.title
+                    onClicked: modelData.activate()
+                }
+            }
+        }
     }
-
 }
