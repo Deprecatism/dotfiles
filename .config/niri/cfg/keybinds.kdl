@@ -1,0 +1,102 @@
+binds {
+
+    // ────────────── Keybindings ──────────────
+    // https://github.com/YaLTeR/niri/wiki/Configuration:-Key-Bindings
+
+    // ─── noctalia-shell keybinds ───
+    // https://docs.noctalia.dev/getting-started/keybinds/
+
+    // ─── Applications ───
+    Mod+Q                               hotkey-overlay-title="Open Terminal: Kitty" { spawn "kitty"; }
+    Mod+R                               hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Mod+W                               hotkey-overlay-title="Open Browser: Brave" { spawn "brave"; }
+    Mod+L                               hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    Mod+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
+
+    // ─── Media Controls ───
+    XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
+    XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
+    XF86AudioMute                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
+    XF86AudioMicMute                    allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
+    XF86AudioNext                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media next"; }
+    XF86AudioPrev                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media previous"; }
+    XF86AudioPlay                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
+    XF86AudioPause                      allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
+
+    // ─── Brightness Controls ───
+    XF86MonBrightnessUp                 allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
+    XF86MonBrightnessDown               allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
+
+    // ─── Window Movement and Focus ───
+    Mod+C                               { close-window; }
+
+    Mod+Left                            { focus-column-left; }
+    Mod+Right                           { focus-column-right; }
+    Mod+Up                              { focus-window-up; }
+    Mod+Down                            { focus-window-down; }
+
+    Mod+Shift+Left                       { move-column-left; }
+    Mod+Shift+Right                      { move-column-right; }
+    Mod+Shift+UP                         { move-window-up; }
+    Mod+Shift+Down                       { move-window-down; }
+
+    // ─── Workspace Switching ───
+    Mod+WheelScrollDown                  cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp                    cooldown-ms=150 { focus-workspace-up; }
+    Mod+Shift+WheelScrollDown            cooldown-ms=150 { move-column-to-workspace-down; }
+    Mod+Shift+WheelScrollUp              cooldown-ms=150 { move-column-to-workspace-up; }
+
+    Mod+1                               { focus-workspace 1; }
+    Mod+2                               { focus-workspace 2; }
+    Mod+3                               { focus-workspace 3; }
+    Mod+4                               { focus-workspace 4; }
+    Mod+5                               { focus-workspace 5; }
+    Mod+6                               { focus-workspace 6; }
+    Mod+7                               { focus-workspace 7; }
+    Mod+8                               { focus-workspace 8; }
+    Mod+9                               { focus-workspace 9; }
+
+    Mod+Shift+1                          { move-column-to-workspace 1; }
+    Mod+Shift+2                          { move-column-to-workspace 2; }
+    Mod+Shift+3                          { move-column-to-workspace 3; }
+    Mod+Shift+4                          { move-column-to-workspace 4; }
+    Mod+Shift+5                          { move-column-to-workspace 5; }
+    Mod+Shift+6                          { move-column-to-workspace 6; }
+    Mod+Shift+7                          { move-column-to-workspace 7; }
+    Mod+Shift+8                          { move-column-to-workspace 8; }
+    Mod+Shift+9                          { move-column-to-workspace 9; }
+
+    Mod+TAB                             { focus-workspace-previous; }
+
+    Mod+D                                { focus-workspace 11; }
+    Mod+S                                { focus-workspace "music"; }
+    Mod+A                                { focus-workspace "sysmon"; }
+
+    // ─── Layout Controls ───
+    Mod+Shift+F                          { expand-column-to-available-width; }
+    Mod+Shift+C                               { center-column; }
+    Mod+CTRL+C                          { center-visible-columns; }
+    Mod+Alt+Left                           { set-column-width "-10%"; }
+    Mod+Alt+Right                           { set-column-width "+10%"; }
+    Mod+Alt+Up                     { set-window-height "-10%"; }
+    Mod+Alt+Down                     { set-window-height "+10%"; }
+
+    // ─── Modes ───
+    Mod+V                               { toggle-window-floating; }
+    Mod+F                               { fullscreen-window; }
+
+    // ─── Screenshots ───
+    Mod+Z                        { screenshot; }
+    Mod+Alt+Z                        { screenshot-screen; }
+    Mod+Shift+Z                        { screenshot-window; }
+
+    // ─── Emergency Escape Key ───
+    // Use this when a fullscreen app blocks your keybinds.
+    // It disables any active keyboard shortcut inhibitor, restoring control.
+    Mod+ESCAPE                          allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
+    // ─── Exit / Power ───
+    CTRL+ALT+Delete                     { quit; } // Also quits Niri
+    Mod+Shift+P                         { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
+    Mod+O                               repeat=false { toggle-overview; }
+}

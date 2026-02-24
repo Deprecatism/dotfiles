@@ -103,11 +103,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH=$PATH:/home/dep/.spicetify
+# Custom stuff
 
-eval "$(starship init zsh)"
+export PATH=$PATH:~/.spicetify
+
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
-
-[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
