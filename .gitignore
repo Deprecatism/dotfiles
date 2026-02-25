@@ -5,3 +5,4 @@
 .config/kitty/themes/
 .config/niri/noctalia.kdl
 .config/nvim/lazy-lock.json
+.config/kitty/current-theme.conf
