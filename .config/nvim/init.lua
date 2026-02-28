@@ -2,6 +2,7 @@ require("config.lazy")
 require("config.tree")
 require("config.theme")
 require("config.formatter")
+require("config.projects")
 
 vim.cmd.colorscheme("catppuccin")
 

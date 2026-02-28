@@ -14,4 +14,5 @@ return {
 		"stevearc/conform.nvim",
 		opts = {},
 	},
+	{ "ahmedkhalf/project.nvim" },
 }
