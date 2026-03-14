@@ -3,10 +3,12 @@ require("config.tree")
 require("config.theme")
 require("config.formatter")
 require("config.projects")
-
+require("config.lsp")
 vim.cmd.colorscheme("catppuccin")
 
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.softtabstop = 2
+
+vim.diagnostic.config({ virtual_text = true })

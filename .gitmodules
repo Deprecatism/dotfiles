@@ -1,0 +1,3 @@
+[submodule ".config/yazi/plugins/clipboard.yazi"]
+	path = .config/yazi/plugins/clipboard.yazi
+	url = https://gitee.com/DreamMaoMao/clipboard.yazi

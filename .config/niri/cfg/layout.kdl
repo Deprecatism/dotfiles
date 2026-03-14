@@ -1,5 +1,6 @@
 layout {
-    gaps 16
+    gaps 10
+    center-focused-column "always"
     border {
         off
     }
@@ -7,13 +8,8 @@ layout {
         off
     }
     background-color "transparent"
-    preset-column-widths {
-        proportion 0.33333
-        proportion 0.5
-        proportion 0.66667
-    }
-    struts {
-
+    default-column-width {
+        proportion 0.95
     }
 }
 

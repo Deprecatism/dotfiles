@@ -1,0 +1,5 @@
+[[mgr.prepend_keymap]]
+on = [ "c", "x"]
+run = ["plugin clipboard"]
+desc = "Copy to system clipboard"
+

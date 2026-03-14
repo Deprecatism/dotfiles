@@ -15,4 +15,18 @@ return {
 		opts = {},
 	},
 	{ "ahmedkhalf/project.nvim" },
+	{
+		"mason-org/mason.nvim",
+		opts = {},
+	},
+	{
+		"vyfor/cord.nvim",
+	},
+	{ "neovim/nvim-lspconfig" },
+	{
+		"jglasovic/venv-lsp.nvim",
+		config = function()
+			require("venv-lsp").setup()
+		end,
+	},
 }

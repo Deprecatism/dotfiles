@@ -1,52 +1,55 @@
 binds {
+    //
+    // ────────────── App launchers ──────────────
+    //
     Mod+Q hotkey-overlay-title="Open Terminal: Kitty" {
         spawn "kitty"
     }
     Mod+R hotkey-overlay-title="Open App Launcher: noctalia launcher" {
-        spawn-sh "qs -c noctalia-shell ipc call launcher toggle"
+        spawn-sh "rofi -show drun"
     }
     Mod+W hotkey-overlay-title="Open Browser: Librewolf" {
         spawn "librewolf"
     }
-    Mod+L hotkey-overlay-title="Lock Screen: noctalia lock" {
-        spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"
-    }
     Mod+E hotkey-overlay-title="File Manager: Yazi" {
-        spawn "Yazi"
+        spawn "kitty" "yazi"
     }
-    // ─── Media Controls ───
+    //
+    // ────────────── Media Controls ──────────────
+    //
     XF86AudioRaiseVolume allow-when-locked=true {
-        spawn-sh "qs -c noctalia-shell ipc call volume increase"
+        spawn-sh "amixer set Master 1%+"
     }
     XF86AudioLowerVolume allow-when-locked=true {
-        spawn-sh "qs -c noctalia-shell ipc call volume decrease"
+        spawn-sh "amixer set Master 1%-"
     }
     XF86AudioMute allow-when-locked=true {
-        spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"
-    }
-    XF86AudioMicMute allow-when-locked=true {
-        spawn-sh "qs -c noctalia-shell ipc call volume muteInput"
+        spawn-sh "amixer set Master toggle"
     }
     XF86AudioNext allow-when-locked=true {
-        spawn-sh "qs -c noctalia-shell ipc call media next"
+        spawn-sh "playerctl next"
     }
     XF86AudioPrev allow-when-locked=true {
-        spawn-sh "qs -c noctalia-shell ipc call media previous"
+        spawn-sh "playerctl previous"
     }
     XF86AudioPlay allow-when-locked=true {
-        spawn-sh "qs -c noctalia-shell ipc call media playPause"
+        spawn-sh "playerctl play-pause"
     }
     XF86AudioPause allow-when-locked=true {
-        spawn-sh "qs -c noctalia-shell ipc call media playPause"
+        spawn-sh "playerctl play-pause"
     }
-    // ─── Brightness Controls ───
+    //
+    // ──────────── Brightness Controls ────────────
+    //
     XF86MonBrightnessUp allow-when-locked=true {
-        spawn-sh "qs -c noctalia-shell ipc call brightness increase"
+        spawn-sh "brightnessctl set 1%+"
     }
     XF86MonBrightnessDown allow-when-locked=true {
-        spawn-sh "qs -c noctalia-shell ipc call brightness decrease"
+        spawn-sh "brightnessctl set 1%-"
     }
-    // ─── Window Movement and Focus ───
+    //
+    // ───────── Window Movement and Focus ─────────
+    //
     Mod+C {
         close-window
     }
@@ -74,7 +77,9 @@ binds {
     Mod+Shift+Down {
         move-window-down
     }
-    // ─── Workspace Switching ───
+    //
+    // ─────────── Workspace Switching ───────────
+    //
     Mod+WheelScrollDown cooldown-ms=150 {
         focus-workspace-down
     }
@@ -144,7 +149,9 @@ binds {
     Mod+TAB {
         focus-workspace-previous
     }
-    // ─── Layout Controls ───
+    //
+    // ─────────── Layout Controls ───────────
+    //
     Mod+Shift+F {
         expand-column-to-available-width
     }
@@ -166,38 +173,39 @@ binds {
     Mod+Alt+Down {
         set-window-height "+10%"
     }
-    // ─── Modes ───
+    //
+    // ─────────── Modes ───────────
+    //
     Mod+V {
         toggle-window-floating
     }
     Mod+F {
         fullscreen-window
     }
-    // ─── Screenshots ───
+    //
+    // ─────────── Screenshots ───────────
+    //
     Mod+Z {
-        screenshot
+        screenshot show-pointer=false
     }
     Mod+Alt+Z {
-        screenshot-screen
+        screenshot-screen show-pointer=false
     }
     Mod+Shift+Z {
         screenshot-window
     }
-    // ─── Emergency Escape Key ───
-    // Use this when a fullscreen app blocks your keybinds.
-    // It disables any active keyboard shortcut inhibitor, restoring control.
+    //
+    // ─────────── Emergency Escape Key ───────────
+    //
     Mod+ESCAPE allow-inhibiting=false {
         toggle-keyboard-shortcuts-inhibit
     }
-    // ─── Exit / Power ───
+    // ───────────  Exit / Power ───────────
     CTRL+ALT+Delete {
         quit
     }
     Mod+Shift+P {
         power-off-monitors
-    }
-    Mod+O repeat=false {
-        toggle-overview
     }
 }
 
