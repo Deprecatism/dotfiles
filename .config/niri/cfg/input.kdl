@@ -11,6 +11,9 @@ input {
         tap
         natural-scroll
     }
+    mouse {
+        accel-speed -0.8
+    }
     focus-follows-mouse
     workspace-auto-back-and-forth
 }

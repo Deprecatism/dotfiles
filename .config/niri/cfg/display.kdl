@@ -3,7 +3,13 @@
 // You will have to remove "/-" and edit it before it takes effect.
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 output "eDP-1" {
-    mode "2560x1600@120.0"
+    mode "1920x1200@120.0"
     scale 1
+    variable-refresh-rate
+}
+output "eDP-2" {
+    mode "1920x1200@120.0"
+    scale 1
+    variable-refresh-rate
 }
 

@@ -6,10 +6,10 @@ binds {
         spawn "kitty"
     }
     Mod+R hotkey-overlay-title="Open App Launcher: noctalia launcher" {
-        spawn-sh "rofi -show drun"
+        spawn-sh "qs -c noctalia-shell ipc call launcher toggle"
     }
     Mod+W hotkey-overlay-title="Open Browser: Librewolf" {
-        spawn "librewolf"
+        spawn "helium-browser"
     }
     Mod+E hotkey-overlay-title="File Manager: Yazi" {
         spawn "kitty" "yazi"
