@@ -12,7 +12,7 @@ input {
         natural-scroll
     }
     mouse {
-        accel-speed -0.8
+        accel-speed 0
     }
     focus-follows-mouse
     workspace-auto-back-and-forth

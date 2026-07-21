@@ -7,8 +7,8 @@ environment {
     XDG_SESSION_TYPE "wayland"
     XDG_CURRENT_DESKTOP "niri"
     QT_QPA_PLATFORMTHEME "gtk3"
-    QT_SCREEN_SCALE_FACTORS "1.25"
-    QT_SCALE_FACTORS "1.25"
+    QT_SCREEN_SCALE_FACTORS "1"
+    QT_SCALE_FACTORS "1"
     EDITOR "nvim"
 }
 debug {
@@ -20,9 +20,12 @@ hotkey-overlay {
 }
 cursor {
     xcursor-theme "BreezeX-RosePine-Linux"
-    xcursor-size 48
+    xcursor-size 24
+    hide-when-typing
 }
 clipboard {
     disable-primary
 }
-
+overview {
+    zoom 0.5
+}

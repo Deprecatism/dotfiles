@@ -9,20 +9,12 @@ layout {
     }
     background-color "transparent"
     default-column-width {
-        proportion 0.95
+        proportion 0.9
     }
 }
-
 // Set the regular wallpaper on the backdrop.
 layer-rule {
-  match namespace="^noctalia-wallpaper*"
-  place-within-backdrop true
+    match namespace="^noctalia-wallpaper*"
+    place-within-backdrop true
 }
 
-
-// Optionally, disable the workspace shadows in the overview.
-overview {
-  workspace-shadow {
-    off
-  }
-}
