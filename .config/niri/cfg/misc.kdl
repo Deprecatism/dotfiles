@@ -20,7 +20,7 @@ hotkey-overlay {
 }
 cursor {
     xcursor-theme "BreezeX-RosePine-Linux"
-    xcursor-size 24
+    xcursor-size 32
     hide-when-typing
 }
 clipboard {

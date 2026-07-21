@@ -6,7 +6,7 @@ return {
     },
     formatters = {
       kdlfmt = {
-        args = { "format", "--kdl-version", "v2", "--stdin" },
+        args = { "format", "--kdl-version", "v1", "--stdin" },
         stdin = true,
       },
     },
