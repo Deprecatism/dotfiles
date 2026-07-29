@@ -2,4 +2,7 @@ window-rule {
     geometry-corner-radius 10
     clip-to-geometry true
 }
-
+window-rule {
+    match app-id="Minecraft.+"
+    variable-refresh-rate false
+}
