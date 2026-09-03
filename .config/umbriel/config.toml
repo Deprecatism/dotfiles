@@ -11,7 +11,7 @@ files = [
 [general]
 mod_key                 = "Super"
 show_cheatsheet         = false
-xwayland                = false
+xwayland                = true
 focus_on_activate       = true
 honor_restored_maximize = true
 

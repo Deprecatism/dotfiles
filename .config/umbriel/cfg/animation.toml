@@ -1,7 +1,7 @@
 [animation.workspaces]
 enabled     = true
 duration_ms = 200
-curve       = "springs"
+curve       = "easeOutQuad"
 
 [animation.windows_in]
 enabled     = true
@@ -16,12 +16,12 @@ curve       = "easeOutQuad"
 [animation.windows_move]
 enabled     = true
 duration_ms = 200
-curve       = "springs"
+curve       = "easeOutQuad"
 
 [animation.overview]
 enabled     = true
 duration_ms = 200
-curve       = "springs"
+curve       = "easeOutQuad"
 
 [animation.springs]
 springs          = { damping = 1, stiffness = 900 }
