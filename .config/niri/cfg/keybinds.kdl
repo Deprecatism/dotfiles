@@ -6,7 +6,7 @@ binds {
         spawn "kitty"
     }
     Mod+R hotkey-overlay-title="Open App Launcher: noctalia launcher" {
-        spawn-sh "qs -c noctalia-shell ipc call launcher toggle"
+        spawn-sh "noctalia msg panel-toggle launcher"
     }
     Mod+W hotkey-overlay-title="Open Browser: Librewolf" {
         spawn "helium-browser"
@@ -16,6 +16,9 @@ binds {
     }
     XF86Mail hotkey-overlay-title="Open Email Client: Thunderbird" {
         spawn "thunderbird"
+    }
+    XF86Launch1 hotkey-overlay-title="Open Rog Control Centre" {
+        spawn "rog-control-center"
     }
     //
     // ────────────── Media Controls ──────────────
@@ -79,6 +82,9 @@ binds {
     }
     Mod+Shift+Down {
         move-window-down
+    }
+    Alt+Tab {
+        spawn-sh "noctalia msg window-switcher"
     }
     //
     // ─────────── Workspace Switching ───────────
@@ -189,10 +195,10 @@ binds {
     // ─────────── Screenshots ───────────
     //
     Mod+Z {
-        screenshot show-pointer=false
+        spawn-sh "noctalia msg screenshot-region"
     }
     Mod+Alt+Z {
-        screenshot-screen show-pointer=false
+        spawn-sh "noctalia msg screenshot-fullscreen"
     }
     Mod+Shift+Z {
         screenshot-window

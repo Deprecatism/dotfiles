@@ -9,7 +9,7 @@ layout {
     }
     background-color "transparent"
     default-column-width {
-        proportion 0.9
+        proportion 0.95
     }
 }
 // Set the regular wallpaper on the backdrop.

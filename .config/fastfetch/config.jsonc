@@ -29,5 +29,24 @@
     "locale",
     "break",
     "colors"
-  ]
+  ],
+  "logo": {
+    "color": {
+      "1": "#63ffff",
+      "2": "#63c6c6"
+    }
+  },
+  "display": {
+    "color": {
+      "keys": "#ffffff",
+      "title": "#c6c6c6"
+    },
+    "percent": {
+      "color": {
+        "green": "#e2e2e2",
+        "yellow": "#474747",
+        "red": "#ffb4ab"
+      }
+    }
+  }
 }
