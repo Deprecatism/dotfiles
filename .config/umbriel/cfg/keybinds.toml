@@ -1,5 +1,5 @@
 [keybinds]
-#   Launchers
+# Launchers
 "Mod+Q"       = "spawn:kitty"
 "Mod+R"       = "spawn:noctalia msg panel-toggle launcher"
 "Mod+W"       = "spawn:helium-browser"
@@ -53,22 +53,22 @@
 "Mod+Shift+9" = "column-move-to-workspace:9"
 "Mod+Tab"     = "workspace-focus-last"
 # Layout Controls
-"Mod+Shift+F"    = "window-toggle-maximize"
-"Mod+Shift+C"    = "column-center"
-"Mod+Alt+Left"   = "window-modify-width:-0.1"
-"Mod+Alt+Right"  = "window-modify-width:0.1"
-"Mod+Alt+Up"     = "window-modify-height:-0.1"
-"Mod+Alt+Down"   = "window-modify-height:0.1"
-"Mod+MouseRight" = "layout-scroll-drag"
+"Mod+Shift+F"   = "window-toggle-maximize"
+"Mod+Shift+C"   = "column-center"
+"Mod+Alt+Left"  = "window-modify-width:-0.1"
+"Mod+Alt+Right" = "window-modify-width:0.1"
+"Mod+Alt+Up"    = "window-modify-height:-0.1"
+"Mod+Alt+Down"  = "window-modify-height:0.1"
 # Modes
 "Mod+V" = "window-toggle-floating"
 "Mod+F" = "window-toggle-fullscreen"
 # Screenshots
 "Mod+Z"     = "spawn:noctalia msg screenshot-region"
 "Mod+Alt+Z" = "spawn:noctalia msg screenshot-fullscreen"
+
 # TODO: Add screenshot window functionality here... Kill me
 # Overview
 [hot_corners.top_left]
 enabled  = true
 delay_ms = 0
-action   = "overview-open"
+action   = "overview-toggle"
