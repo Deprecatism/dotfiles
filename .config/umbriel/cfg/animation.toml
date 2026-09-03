@@ -1,0 +1,32 @@
+[animation.workspaces]
+enabled     = true
+duration_ms = 200
+curve       = "springs"
+
+[animation.windows_in]
+enabled     = true
+duration_ms = 200
+curve       = "easeOutQuad"
+
+[animation.windows_out]
+enabled     = true
+duration_ms = 200
+curve       = "easeOutQuad"
+
+[animation.windows_move]
+enabled     = true
+duration_ms = 200
+curve       = "springs"
+
+[animation.overview]
+enabled     = true
+duration_ms = 200
+curve       = "springs"
+
+[animation.springs]
+springs          = { damping = 1, stiffness = 900 }
+springs_windwos  = { damping = 1, stiffness = 800 }
+springs_overview = { damping = 1, stiffness = 900 }
+
+[animation.beziers]
+easeOutQuad = [ 0.5, 0.89, 1, 1 ]

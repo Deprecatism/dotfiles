@@ -1,0 +1,22 @@
+[input]
+middle_click_paste = false
+
+[input.keyboard]
+layout         = "us"
+numlock_toggle = true
+
+[input.touchpad]
+tap            = true
+natural_scroll = true
+
+[input.mouse]
+sensitivity = -0.5
+
+[input.cursor]
+theme            = "Bibata-Modern-Classic"
+size             = 20
+hardware_cursor  = true
+hide_when_typing = false
+
+[input.focus]
+follows_mouse = true

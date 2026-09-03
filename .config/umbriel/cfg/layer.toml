@@ -1,0 +1,5 @@
+[[window_rule]]
+match.app_id     = "dev.noctalia.Noctalia"
+default_floating = true
+default_width    = 1080
+default_height   = 920

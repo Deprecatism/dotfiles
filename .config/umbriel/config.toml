@@ -1,0 +1,25 @@
+[include]
+files = [
+    "cfg/animation.toml",
+    "cfg/autostart.toml",
+    "cfg/display.toml",
+    "cfg/input.toml",
+    "cfg/keybinds.toml",
+    "cfg/layout.toml",
+]
+
+[general]
+mod_key                 = "Super"
+show_cheatsheet         = false
+xwayland                = false
+focus_on_activate       = true
+honor_restored_maximize = true
+
+[environment]
+ELECTRON_OZONE_PLATFORM_HINT        = "auto"
+QT_QPA_PLATFORM                     = "wayland"
+QT_WAYLAND_DISABLE_WINDOWDECORATION = "1"
+QT_QPA_PLATFORMTHEME                = "qt6ct"
+QT_SCREEN_SCALE_FACTORS             = "1"
+QT_SCALE_FACTORS                    = "1"
+EDITOR                              = "nvim"

@@ -1,0 +1,19 @@
+[layout]
+mode = "scrolling"
+gap  = 10
+
+[layout.scrolling]
+direction              = "horizontal"
+center_focused         = true
+default_width_fraction = 0.95
+
+[appearance]
+prefer_no_csd      = true
+border_width       = 0
+outer_border_width = 0
+corner_radius      = 20
+
+[overview]
+zoom            = 0.5
+background_blur = true
+shortcuts       = false

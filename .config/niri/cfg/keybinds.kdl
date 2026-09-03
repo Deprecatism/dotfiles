@@ -39,10 +39,10 @@ binds {
         spawn-sh "playerctl previous"
     }
     XF86AudioPlay allow-when-locked=true {
-        spawn-sh "playerctl play-pause"
+        spawn-sh "playerctl play"
     }
     XF86AudioPause allow-when-locked=true {
-        spawn-sh "playerctl play-pause"
+        spawn-sh "playerctl pause"
     }
     //
     // ──────────── Brightness Controls ────────────
@@ -163,12 +163,6 @@ binds {
     //
     Mod+Shift+F {
         expand-column-to-available-width
-    }
-    Mod+Shift+C {
-        center-column
-    }
-    Mod+CTRL+C {
-        center-visible-columns
     }
     Mod+Alt+Left {
         set-column-width "-10%"
