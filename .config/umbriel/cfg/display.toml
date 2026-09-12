@@ -1,7 +1,14 @@
 [output."eDP-1"]
 scale = 1.5
-vrr   = "always"
+vrr = "always"
+sdr_white = 100
+hdr = "on"
+
+[output."HEADLESS-1"]
+mode = "2400x1080@90"
+vrr = "always"
+scale = 1.5
 
 [output."eDP-2"]
 scale = 1.5
-vrr   = "always"
+vrr = "always"

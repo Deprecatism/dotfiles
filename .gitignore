@@ -8,4 +8,5 @@
 .config/kitty/current-theme.conf
 .config/autostart/discord.desktop
 .config/yazi/flavors/noctalia.yazi/
-
+.config/umbriel/noctalia.toml
+scripts/zipline-script-file.sh

@@ -3,6 +3,10 @@ window-rule {
     geometry-corner-radius 20
     // Clips window contents to the rounded corner boundaries.
     clip-to-geometry true
+    background-effect {
+        blur true
+        xray true
+    }
 }
 // Floating Noctalia settings window.
 window-rule {
@@ -19,4 +23,5 @@ debug {
     // Allows notification actions and window activation from Noctalia.
     honor-xdg-activation-with-invalid-serial
 }
+
 

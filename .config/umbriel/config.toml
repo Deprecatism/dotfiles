@@ -6,6 +6,7 @@ files = [
     "cfg/input.toml",
     "cfg/keybinds.toml",
     "cfg/layout.toml",
+    "noctalia.toml",
 ]
 
 [general]
