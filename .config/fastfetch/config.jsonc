@@ -1,36 +1,73 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
   "modules": [
-    "title",
-    "separator",
-    "os",
-    "host",
-    "kernel",
-    "uptime",
-    "packages",
-    "shell",
-    "display",
-    "de",
-    "wm",
-    "wmtheme",
-    "theme",
-    "icons",
-    "font",
-    "cursor",
-    "terminal",
-    "terminalfont",
-    "cpu",
-    "gpu",
-    "memory",
-    "swap",
-    "disk",
-    "battery",
-    "poweradapter",
-    "locale",
-    "break",
-    "colors"
+    {
+      "type": "custom",
+      "format": "─────────────────────────────────────────────────────"
+    },
+    {
+      "type": "os",
+      "key": "OS ",
+      "keyWidth": 15
+    },
+    {
+      "type": "kernel",
+      "key": "Kernel ",
+      "keyWidth": 15
+    },
+    {
+      "type": "uptime",
+      "key": "Uptime ",
+      "keyWidth": 15,
+      "format": "{formatted}"
+    },
+    {
+      "type": "shell",
+      "key": "Shell ",
+      "keyWidth": 15
+    },
+    {
+      "type": "de",
+      "key": "DE ",
+      "keyWidth": 15
+    },
+    {
+      "type": "wm",
+      "key": "WM ",
+      "keyWidth": 15
+    },
+    {
+      "type": "terminal",
+      "key": "Terminal ",
+      "keyWidth": 15
+    },
+    {
+      "type": "cpu",
+      "key": "CPU ",
+      "keyWidth": 15
+    },
+    {
+      "type": "gpu",
+      "key": "GPU ",
+      "keyWidth": 15
+    },
+    {
+      "type": "memory",
+      "key": "Memory ",
+      "keyWidth": 15
+    },
+    {
+      "type": "swap",
+      "key": "Swap ",
+      "keyWidth": 15
+    },
+    {
+      "type": "custom",
+      "format": "─────────────────────────────────────────────────────"
+    }
   ],
   "logo": {
+    "type": "small",
     "color": {
       "1": "#ffffff",
       "2": "#c6c6c6"
@@ -47,6 +84,7 @@
         "yellow": "#474747",
         "red": "#ffb4ab"
       }
-    }
+    },
+    "separator": ""
   }
 }
